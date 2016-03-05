@@ -1,14 +1,14 @@
 # PROG 02: Represent!
 
-Briefly describe your app here.
+An App that lets the user get quick information about the upcoming election.
 
 ## Authors
 
-FirstName LastName ([your_email@berkeley.edu](mailto:your_email@berkeley.edu))
+Tiffanie Lo ([tiffanielo@berkeley.edu](mailto:tiffanielo@berkeley.edu))
 
 ## Demo Video
 
-See [your demo video title here] (https://link_to_your_video)
+See [PROG02BVID] (https://youtu.be/sj5je5HxJYg)
 
 ## Screenshots
 
@@ -16,5 +16,4 @@ See [your demo video title here] (https://link_to_your_video)
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Any other support
+* cs160 Catnip
