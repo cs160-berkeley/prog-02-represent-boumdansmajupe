@@ -6,9 +6,13 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class DetailedView extends AppCompatActivity {
-
+    TextView RepNameView;
+    TextView PositionInput;
+    TextView TermEndInput;
+    TextView BillOneInput;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +28,16 @@ public class DetailedView extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        RepNameView = (TextView) findViewById(R.id.RepNameView);
+        PositionInput = (TextView) findViewById(R.id.PositionInput);
+        TermEndInput = (TextView) findViewById(R.id.TermEndInput);
+        BillOneInput = (TextView) findViewById(R.id.BillOneInput);
+        basedOnRepChangeInfo();
+    }
+
+    public void basedOnRepChangeInfo() {
+        System.out.println("BasedOnRepChangeInfoWasCalled");
+
     }
 
 }

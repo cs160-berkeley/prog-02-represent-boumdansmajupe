@@ -11,13 +11,20 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.tiffanielo.weartest.CongressionalView"
     tools:showIn="@layout/activity_congressional_view">
+    <com.twitter.sdk.android.core.identity.TwitterLoginButton
+        android:id="@+id/twitter_login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LoadMoreBtn"
+        android:layout_centerHorizontal="true" />
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView"
+        android:id="@+id/FirstRepColor"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:src="#b9f61d1d"
+
         android:layout_alignBottom="@+id/BtnRepNumberOne"
         android:layout_alignTop="@+id/BtnRepNumberOne" />
 
@@ -26,23 +33,25 @@
         android:layout_height="wrap_content"
         android:id="@+id/BtnRepNumberOne"
         android:onClick="RepOnetoDetailedView"
-        android:src="@drawable/paulryan" />
+        android:padding="50dp"
+
+        />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageView2"
+        android:id="@+id/SecondRepColor"
         android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/BtnRepNumberTwo"
         android:layout_alignBottom="@+id/BtnRepNumberTwo"
         android:layout_alignParentEnd="true"
-        android:src="#c42153e8" />
+         />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/BtnRepNumberTwo"
-        android:layout_below="@+id/imageView"
+        android:layout_below="@+id/FirstRepColor"
         android:layout_alignParentStart="true"
         android:layout_marginTop="48dp"
         android:src="@drawable/evanlow" />
@@ -71,7 +80,7 @@
         android:layout_height="wrap_content"
         android:text="EMAIL ME"
         android:id="@+id/RepTwoEmailMeBtn"
-        android:layout_alignBottom="@+id/imageView2"
+        android:layout_alignBottom="@+id/SecondRepColor"
         android:layout_alignEnd="@+id/EmailMeBtn" />
 
     <Button
@@ -100,5 +109,14 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="58dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="TWITTERFEED"
+        android:id="@+id/RepTwoTFeed"
+        android:layout_alignTop="@+id/SecondRepColor"
+        android:layout_alignStart="@+id/RepTwoMyWebsiteBtn" />
 
 </RelativeLayout>

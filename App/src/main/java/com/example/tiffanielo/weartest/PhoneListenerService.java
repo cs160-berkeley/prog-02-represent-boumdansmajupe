@@ -33,7 +33,9 @@ public class PhoneListenerService extends WearableListenerService {
 //            Toast toast = Toast.makeText(context, value, duration);
 //            toast.show();
             Intent sendIntent = new Intent(this, DetailedView.class);
+            sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(sendIntent);
+            System.out.println("Intentsentbitch");
 
             // so you may notice this crashes the phone because it's
             //''sending message to a Handler on a dead thread''... that's okay. but don't do this.

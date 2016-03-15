@@ -43,7 +43,7 @@ public class PhoneToWatch extends Service {
         // Which cat do we want to feed? Grab this info from INTENT
         // which was passed over when we called startService
 
-        //Bundle extras = intent.getExtras();
+       // Bundle extras = intent.getExtras();
         //final String RepName = extras.getString("Rep Name");
 
         // Send the message with the cat name
