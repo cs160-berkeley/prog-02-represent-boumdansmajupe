@@ -8,7 +8,7 @@ Tiffanie Lo ([tiffanielo@berkeley.edu](mailto:tiffanielo@berkeley.edu))
 
 ## Demo Video
 
-See [PROG02BVID] (https://youtu.be/sj5je5HxJYg)
+See [PROG02CVID] (https://youtu.be/27m9K6-toLo)
 
 ## Screenshots
 
