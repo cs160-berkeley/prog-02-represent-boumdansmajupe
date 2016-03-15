@@ -1,60 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tiffanielo.weartest">
-    <!--these were added in Step One and Two... If Doesnt work probs an issue in placement-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@android:style/Theme.DeviceDefault">
         <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".MainWatchView"
+            android:label="@string/title_activity_main_watch_view">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".CongressionalView"
-            android:label="@string/title_activity_congressional_view"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".DetailedView"
-            android:label="@string/title_activity_detailed_view"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_detailed_view">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
 
         <!--<service-->
-            <!--android:name=".PhoneToWatch"-->
-            <!--android:enabled="true"-->
-            <!--android:exported="true" />-->
-        <!--<service-->
-            <!--android:name=".PhoneListenerService"-->
+            <!--android:name=".WatchToPhoneService"-->
             <!--android:enabled="true"-->
             <!--android:exported="true"></service>-->
-        <service android:name=".PhoneToWatch" />
+        <service android:name=".WatchToPhoneService" />
         <!-- Listeners are special services that need to be declared like below, as BIND_LISTENER -->
-        <service android:name=".PhoneListenerService"
+        <service android:name=".WatchListener"
             android:label="WearTest">
             <intent-filter>
                 <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
             </intent-filter>
         </service>
-        <meta-data
-            android:name="com.google.android.geo.AIzaSyB6aFsrrqZ9NeHI7b5dsQrMha7S0RUl_Do"
-            android:value="AIzaSyB6aFsrrqZ9NeHI7b5dsQrMha7S0RUl_Do"/>
-
 
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="39d39cc2fc079586fdfd4fff93478051ba8f7361" />
     </application>
 
-
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
